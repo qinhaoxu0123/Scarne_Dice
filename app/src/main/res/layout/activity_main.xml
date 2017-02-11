@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" >
+
+
+    <TextView
+        android:id="@+id/yourscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your score: 0"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/compscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Computer Score: 0"
+        android:layout_alignParentRight="true"/>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dice1"
+        android:id="@+id/imageView"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/compscore"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_roll"
+        android:layout_below="@id/imageView"
+        android:id="@+id/rollbutton"
+        android:onClick="Roll_image"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_hold"
+        android:id="@+id/holdbutton"
+        android:layout_below="@id/imageView"
+        android:layout_centerInParent="true"
+        android:onClick="holdDice"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_reset"
+        android:id="@+id/resetbutton"
+        android:layout_below="@id/imageView"
+        android:layout_alignParentRight="true"
+        android:onClick="resetDice"/>
+
+</RelativeLayout>
